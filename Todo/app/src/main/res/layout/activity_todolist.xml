@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.TodolistActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarTodolist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/lightPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/toolbar_todolist" />
+
+    <EditText
+        android:id="@+id/edtTodolistTitle"
+        android:layout_width="311dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:fontFamily="@font/baloo"
+        android:hint="Title"
+        android:inputType="textShortMessage|textPersonName"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarTodolist" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewTodolist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTodolistTitle" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.mha.todo.view.NewTodoFragment"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTodolistTitle"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvAlarm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerviewTodolist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtTodolistTitle"
+        app:layout_constraintTop_toTopOf="@+id/edtTodolistTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

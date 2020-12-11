@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itemback"
+        android:icon="@mipmap/back_foreground"
+        android:title="Back"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/itemdelete"
+        android:icon="@mipmap/delete_foreground"
+        android:title="delete"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/itemalarm"
+        android:icon="@mipmap/alarm_foreground"
+        android:title="Alarm"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/itemcopy"
+        android:icon="@mipmap/copyclipboard_foreground"
+        android:title="Copy clipboard"
+        app:showAsAction="always" />
+</menu>
